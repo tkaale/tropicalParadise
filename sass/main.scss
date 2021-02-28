@@ -13,6 +13,7 @@
 html {
     font-size: 62.5%; //10px
     scroll-behavior: smooth;
+    overflow-x:hidden;
 }
 
 body {
@@ -178,6 +179,59 @@ body {
     }
 }
 
+//DREAMS
+
+.dreams {
+    &__box {
+        display: flex;
+        flex-direction: column;
+        margin: 2em 0;
+    }
+
+    &__img {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+    &__title {
+        margin-bottom: 0.5em;
+    }
+
+    &__text {
+        font-size: 1.4rem;
+    }
+}
+
+// HERO-IMG
+
+.hero-img {
+    position: relative;
+    padding: 10em 0em;
+    @include heroImages("../img/hero_640.jpg");
+    text-align: center;
+    color:$pure-white;
+    overflow: hidden;
+
+    &__title{
+        font-family: 'Dancing Script', cursive;
+        font-size: 4rem;
+        font-weight: 300;
+        margin-bottom: 0.5em;
+    }
+
+    &__text {
+        padding: 1em 0;
+    }
+
+    hr {
+        width: 70%;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+}
+
+
+
 //==================================//
 // MEDIA
 //==================================//
@@ -192,12 +246,42 @@ body {
             width: 50%;
         }
     }
+
+    .dreams {
+        &__box {
+            flex-direction: row;
+            justify-content: space-between;
+
+            &-text {
+                width: 55%;
+
+                &--right {
+                    text-align: right;
+                }
+
+            }
+
+            &-img {
+                width: 40%;
+
+                &--right {
+                    order:1;
+                }
+            }
+        }
+
+        &__img {
+            margin-bottom: 0;
+            max-height: 300px;
+
+        }
+    }
 }
 
 @media (min-width:768px) {
 
     .nav {
-        width: 50%;
+        width: 60%;
 
         &__item {
             width: 0;
@@ -223,9 +307,29 @@ body {
         height: 50px;
         width: 45%;
     }
+
+    .dreams {
+        &__text {
+            font-size: 1.8rem;
+        }
+    }
+
+    .hero-img {
+        padding: 10em 2em;
+
+        &__text {
+            font-size: 2rem;
+        }
+    }
 }
 
 @media (min-width:992px) {
+
+    .nav {
+        &__item {
+            font-size: 4rem;
+        }
+    }
     .burger-btn {
         top: 50px;
         right: 50px;
@@ -234,5 +338,37 @@ body {
     .header {
         background-image: $blue-gradient, url("../img/header_1920.jpg");
 
+    }
+    .dreams {
+        &__box {
+            margin:5em 0;
+
+            &-text {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+        &__title {
+            font-size: 3.4rem;
+
+        }
+
+        &__text {
+            font-size: 2rem;;
+        }
+    }
+
+    .hero-img {
+        background-image: $blue-gradient, url("../img/hero_1920.jpg");
+        padding: 15em 2em;
+
+        &__title {
+            font-size: 6rem;
+        }
+
+        &__text {
+            font-size: 2.5rem;
+        }
     }
 }
