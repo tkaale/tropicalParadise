@@ -7,9 +7,21 @@ const menuStart = () => {
 
     navItem.forEach(item => {
         item.addEventListener('click', () => {
-            nav.classList.remove('nav--active')
-        })
-    })
-}
+            nav.classList.remove('nav--active');
+        });
+    });
+
+    handleNavItemNavigation();
+};
+
+const handleNavItemNavigation = () => {
+    let delayTime = 0;
+
+    navItem.forEach(item => {
+        item.classList.toggle('nav-items-animation');
+        item.style.animationDelay = '.' + delayTime + 's';
+        delayTime++;
+    });
+};
 
 navBtn.addEventListener('click', menuStart);
