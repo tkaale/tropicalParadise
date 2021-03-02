@@ -13,7 +13,7 @@
 html {
     font-size: 62.5%; //10px
     scroll-behavior: smooth;
-    overflow-x:hidden;
+    overflow-x: hidden;
 }
 
 body {
@@ -192,6 +192,7 @@ body {
         width: 100%;
         margin-bottom: 1em;
     }
+
     &__title {
         margin-bottom: 0.5em;
     }
@@ -208,10 +209,10 @@ body {
     padding: 10em 0em;
     @include heroImages("../img/hero_640.jpg");
     text-align: center;
-    color:$pure-white;
+    color: $pure-white;
     overflow: hidden;
 
-    &__title{
+    &__title {
         font-family: 'Dancing Script', cursive;
         font-size: 4rem;
         font-weight: 300;
@@ -227,9 +228,145 @@ body {
         max-width: 800px;
         margin: 0 auto;
     }
-
 }
 
+//ISLANDS
+
+.islands {
+    &__card {
+        position: relative;
+        margin: 1em 0;
+        height: 450px;
+        color: $pure-white;
+        text-align: center;
+        perspective: 1000px;
+
+        &:hover {
+            .islands__card-img {
+                transform: rotateY(-180deg);
+                opacity: 0;
+            }
+
+            .islands__card-info {
+                transform: rotateY(0);
+                opacity: 1;
+            }
+        }
+
+        &-img {
+            padding: 2em;
+            height: 100%;
+            border-radius: 8px;
+            background-size: cover;
+            background-position: center;
+            transition: transform 1s, opacity 1s;
+
+            &--first {
+                background-image: $light-blue-gradient, url("../img/water-3354063_640.jpg");
+            }
+
+            &--second {
+                background-image: $blue-gradient, url("../img/hawaii-79928_640.jpg");
+            }
+
+            &--third {
+                background-image: $purple-gradient, url("../img/boat-166738_640.jpg");
+            }
+
+            &--title {
+                font-family: 'Dancing Script', cursive;
+                font-size: 2.8rem;
+                font-weight: 300;
+            }
+
+            &--info {
+                position: absolute;
+                bottom: 30px;
+                right: 30px;
+                font-size: 1.8rem;
+
+                .icon-tabler-chevrons-right {
+                    position: absolute;
+                    left: -30px;
+                    top: 1px;
+                }
+            }
+        }
+
+        &-info {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 2em;
+            border-radius: 8px;
+            transform: rotateY(180deg);
+            opacity: 0;
+            transition: transform 1s, opacity 1s;
+
+
+            &--first {
+                background-image: $light-blue-gradient;
+            }
+
+            &--second {
+                background-image: $blue-gradient;
+            }
+
+            &--third {
+                background-image: $purple-gradient;
+            }
+
+            &--title {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 1.2em;
+                font-family: 'Dancing Script', cursive;
+                font-size: 2.8rem;
+                font-weight: 300;
+            }
+
+            &-list {
+                margin: 0 auto;
+                width: 70%;
+                list-style: none;
+
+                &-item {
+                    padding: 1em;
+                    font-size: 1.4rem;
+                    border-bottom: 1px solid $light-white;
+
+                    &:last-child {
+                        border-bottom: none;
+                    }
+                }
+            }
+
+            &-btn {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 2em;
+                padding: 1em;
+                width: 80%;
+                border-radius: 8px;
+                border: none;
+                background-color: $green-color;
+                cursor: pointer;
+
+                &::before {
+                    background-color: $green-color-hover;
+                }
+
+            }
+        }
+    }
+}
 
 
 //==================================//
@@ -265,7 +402,7 @@ body {
                 width: 40%;
 
                 &--right {
-                    order:1;
+                    order: 1;
                 }
             }
         }
@@ -321,6 +458,19 @@ body {
             font-size: 2rem;
         }
     }
+
+    .islands {
+        &__cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        &__card {
+            margin: 1em;
+            width: 45%;
+        }
+    }
 }
 
 @media (min-width:992px) {
@@ -330,6 +480,7 @@ body {
             font-size: 4rem;
         }
     }
+
     .burger-btn {
         top: 50px;
         right: 50px;
@@ -339,9 +490,10 @@ body {
         background-image: $blue-gradient, url("../img/header_1920.jpg");
 
     }
+
     .dreams {
         &__box {
-            margin:5em 0;
+            margin: 5em 0;
 
             &-text {
                 display: flex;
@@ -349,13 +501,15 @@ body {
                 justify-content: center;
             }
         }
+
         &__title {
             font-size: 3.4rem;
 
         }
 
         &__text {
-            font-size: 2rem;;
+            font-size: 2rem;
+            ;
         }
     }
 
@@ -369,6 +523,14 @@ body {
 
         &__text {
             font-size: 2.5rem;
+        }
+    }
+
+    .islands {
+
+        &__card {
+            margin: 1em;
+            width: 30%;
         }
     }
 }
