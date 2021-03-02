@@ -208,6 +208,7 @@ body {
     position: relative;
     padding: 10em 0em;
     @include heroImages("../img/hero_640.jpg");
+    background-attachment: scroll;
     text-align: center;
     color: $pure-white;
     overflow: hidden;
@@ -516,15 +517,17 @@ body {
     .hero-img {
         background-image: $blue-gradient, url("../img/hero_1920.jpg");
         padding: 15em 2em;
-
-        &__title {
-            font-size: 6rem;
-        }
-
-        &__text {
-            font-size: 2.5rem;
-        }
+        background-attachment: fixed;
     }
+
+    &__title {
+        font-size: 6rem;
+    }
+
+    &__text {
+        font-size: 2.5rem;
+    }
+
 
     .islands {
 

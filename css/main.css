@@ -344,6 +344,7 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  background-attachment: scroll;
   text-align: center;
   color: #fff;
   overflow: hidden;
@@ -631,11 +632,12 @@ body {
   .hero-img {
     background-image: linear-gradient(45deg, rgba(20, 105, 241, 0.75), rgba(42, 10, 184, 0.75)), url("../img/hero_1920.jpg");
     padding: 15em 2em;
+    background-attachment: fixed;
   }
-  .hero-img__title {
+  __title {
     font-size: 6rem;
   }
-  .hero-img__text {
+  __text {
     font-size: 2.5rem;
   }
   .islands__card {
