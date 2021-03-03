@@ -369,6 +369,67 @@ body {
     }
 }
 
+//OFFERS
+
+.offers {
+    position: relative;
+    @include heroImages("../img/maldives-3220702_640.jpg");
+
+    .section-heading {
+        color: $pure-white;
+    }
+
+    &__option {
+        margin: 1em 0;
+        box-shadow: 5px 5px 10px #2e2e2e2e;
+        background-color: $pure-white;
+        overflow: hidden;
+
+        &-img {
+            width: 100%;
+            transition: transform .3s;
+
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        &-info {
+            padding: 2em;
+            background-color: $pure-white;
+            z-index:10;
+        }
+
+        &-heading {
+            margin-bottom: 0.5em;
+            font-size: 2.4rem;
+            font-weight: 300;
+        }
+
+        &-text {
+            margin-bottom: 0.5em;
+            font-size: 1.3rem;
+            color: $dark;
+        }
+
+        &-btn {
+            margin-top: 1em;
+            padding: 0.8em;
+            width: 100%;
+            color: $pure-white;
+            background-color: $main-color;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+
+            &::before {
+                background-color: $secondary-color;
+            }
+        }
+    }
+}
+
 
 //==================================//
 // MEDIA
@@ -414,6 +475,8 @@ body {
 
         }
     }
+
+
 }
 
 @media (min-width:768px) {
@@ -470,6 +533,38 @@ body {
         &__card {
             margin: 1em;
             width: 45%;
+        }
+    }
+
+    .offers {
+        &__option {
+            display: flex;
+            margin: 2em 0;
+            width: 100%;
+
+            &-img {
+                width: 50%;
+                height:auto;
+
+                &--right {
+                    order: 1;
+                }
+            }
+
+            &-info {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            &-heading {
+                margin-bottom: 0.5em;
+                font-size: 3rem;
+            }
+
+            &-btn {
+                padding: 1em;
+            }
         }
     }
 }
@@ -534,6 +629,24 @@ body {
         &__card {
             margin: 1em;
             width: 30%;
+        }
+    }
+
+
+    .offers {
+        position: relative;
+        background-image: $blue-gradient, url("../img/maldives-3220702_1920.jpg");
+
+        &__option {
+
+            &-img {
+                object-fit: cover;
+                height: 400px;
+            }
+
+            &-text {
+                font-size: 1.4rem;
+            }
         }
     }
 }
