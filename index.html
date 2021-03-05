@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Open+Sans:wght@300;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -80,14 +81,8 @@
                     <div class="islands__card" onclick="void(0)">
                         <div class="islands__card-img islands__card-img--first ">
                             <h3 class="islands__card-img--title">Wyspa Tiki Taki</h3>
-                            <p class="islands__card-img--info"><svg xmlns="http://www.w3.org/2000/svg"
-                                    class="icon icon-tabler icon-tabler-chevrons-right" width="24" height="24"
-                                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                                    stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                    <polyline points="7 7 12 12 7 17"></polyline>
-                                    <polyline points="13 7 18 12 13 17"></polyline>
-                                </svg>Więcej informacji</p>
+                            <p class="islands__card-img--info"><img src="./icons/tabler-icon-chevrons-right.svg"
+                                    class="icon-tabler-chevrons-right">Więcej informacji</p>
                         </div>
                         <div class="islands__card-info islands__card-info--first">
                             <h3 class="islands__card-info--title">Wyspa Tiki Taki</h3>
@@ -104,14 +99,8 @@
                     <div class="islands__card" onclick="void(0)">
                         <div class="islands__card-img islands__card-img--second ">
                             <h3 class="islands__card-img--title">Wyspa Toka Toka</h3>
-                            <p class="islands__card-img--info"><svg xmlns="http://www.w3.org/2000/svg"
-                                    class="icon icon-tabler icon-tabler-chevrons-right" width="24" height="24"
-                                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                                    stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                    <polyline points="7 7 12 12 7 17"></polyline>
-                                    <polyline points="13 7 18 12 13 17"></polyline>
-                                </svg>Więcej informacji</p>
+                            <p class="islands__card-img--info"><img src="./icons/tabler-icon-chevrons-right.svg"
+                                    class="icon-tabler-chevrons-right">Więcej informacji</p>
                         </div>
                         <div class="islands__card-info islands__card-info--second">
                             <h3 class="islands__card-info--title">Wyspa Toka Toka</h3>
@@ -128,14 +117,8 @@
                     <div class="islands__card" onclick="void(0)">
                         <div class="islands__card-img islands__card-img--third ">
                             <h3 class="islands__card-img--title">Wyspa Nobu</h3>
-                            <p class="islands__card-img--info"><svg xmlns="http://www.w3.org/2000/svg"
-                                    class="icon icon-tabler icon-tabler-chevrons-right" width="24" height="24"
-                                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                                    stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                    <polyline points="7 7 12 12 7 17"></polyline>
-                                    <polyline points="13 7 18 12 13 17"></polyline>
-                                </svg>Więcej informacji</p>
+                            <p class="islands__card-img--info"><img src="./icons/tabler-icon-chevrons-right.svg"
+                                    class="icon-tabler-chevrons-right">Więcej informacji</p>
                         </div>
                         <div class="islands__card-info islands__card-info--third">
                             <h3 class="islands__card-info--title">Wyspa Nobu</h3>
@@ -193,12 +176,69 @@
                             <button class="offers__option-btn btn-special-animation">Wybierz</button>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
 
+        <section class="reviews section-padding section white-section" id="reviews">
+            <div class="wrapper">
+                <h2 class="section-heading">Opinie</h2>
+
+                <div class="reviews__boxes">
+
+                    <div class="reviews__box">
+                        <div class="reviews__box-img">
+                            <img src="./img/winters-1919143_640.jpg" alt="Anna Nowak">
+                        </div>
+                        <div class="reviews__box-info">
+                            <div class="reviews__box-quote"><img src="./icons/tabler-icon-blockquote.svg"></div>
+                            <p class="reviews__box-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, voluptatibus.
+                                Expedita commodi laudantium, asperiores dolorem officia tenetur accusantium molestias.
+                                Doloremque!
+                            </p>
+                            <strong>Anna Nowak</strong>
+                        </div>
+                    </div>
+                    <div class="reviews__box">
+                        <div class="reviews__box-img">
+                            <img src="./img/happy-1836445_640.jpg" alt="Jan Kowalski">
+                        </div>
+                        <div class="reviews__box-info">
+                            <div class="reviews__box-quote"><img src="./icons/tabler-icon-blockquote.svg"></div>
+                            <p class="reviews__box-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, voluptatibus.
+                                Expedita commodi laudantium, asperiores dolorem officia tenetur accusantium
+                                molestias.
+                                Doloremque!
+                            </p>
+                            <strong>Jan Kowalski</strong>
+                        </div>
+                    </div>
+                    <div class="reviews__box">
+                        <div class="reviews__box-img">
+                            <img src="./img/attractive-1869761_640.jpg" alt="Maja Kowalska">
+                        </div>
+                        <div class="reviews__box-info">
+                            <div class="reviews__box-quote"><img src="./icons/tabler-icon-blockquote.svg"></div>
+                            <p class="reviews__box-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium,
+                                voluptatibus.
+                                Expedita commodi laudantium, asperiores dolorem officia tenetur accusantium
+                                molestias.
+                                Doloremque!
+                            </p>
+                            <strong>Maja Wiśniewska</strong>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
-
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./js/slick.js"></script>
     <script src="./js/main.js"></script>
 </body>
 
