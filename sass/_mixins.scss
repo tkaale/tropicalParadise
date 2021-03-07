@@ -1,7 +1,7 @@
 @mixin burgerBtn {
     position: absolute;
     right: 0;
-    height: 3px;
+    height: 4px;
     content: "";
     background-color: $pure-white;
     transition: width .3s;

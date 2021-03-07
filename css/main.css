@@ -111,6 +111,7 @@ html {
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 1.6rem;
+  overflow-x: hidden;
 }
 
 .burger-btn {
@@ -144,7 +145,7 @@ body {
 .burger-btn__bars, .burger-btn__bars::after, .burger-btn__bars::before {
   position: absolute;
   right: 0;
-  height: 3px;
+  height: 4px;
   content: "";
   background-color: #fff;
   -webkit-transition: width .3s;
@@ -258,6 +259,12 @@ body {
 .nav-items-animation {
   -webkit-animation: navItemsAnimation 1s both;
           animation: navItemsAnimation 1s both;
+}
+
+.black-bars-color,
+.black-bars-color::after,
+.black-bars-color::before {
+  background-color: #2e2e2e;
 }
 
 .header {
@@ -639,6 +646,7 @@ body {
 .contact {
   position: relative;
   background-color: #eee;
+  overflow: hidden;
 }
 
 .contact .white-block-left {
